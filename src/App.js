@@ -1,5 +1,7 @@
 import './App.css';
 import Welcome from './components/Welcome';
+import About from './components/About';
+import Footer from './components/Footer';
 
 function App() {
   return (
