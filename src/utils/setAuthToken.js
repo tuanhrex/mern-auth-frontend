@@ -1,16 +1,16 @@
-import axios from 'axios'
+import axios from 'axios';
 
-// This utility with add the authorized user's JWT to the request header
+// This utility will add the authorized user's JWT to the request header
 // Any routes that are protected will require the JWT in order to access them.
 
 const setAuthToken = (token) => {
     if (token) {
-        // Apply the token to every requires header
+        // Apply the token to every request header
         axios.defaults.headers.common['Authorization'] = token;
-        
+        console.log('-- Headers ---');
+        console.log(axios.defaults.headers.common);
     } else {
-        delete axios.defaults.headers.common['Authorization']
-
+        delete axios.defaults.headers.common['Authorization'];
     }
 }
 
